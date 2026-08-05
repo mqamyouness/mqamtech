@@ -1,0 +1,2 @@
+/* Persist visitor theme preference */
+const savedTheme=localStorage.getItem('mqamtech-theme');if(savedTheme==='dark')document.body.classList.add('dark');document.addEventListener('click',e=>{const button=e.target.closest('.theme-toggle:not(.search-toggle)');if(!button)return;document.body.classList.toggle('dark');localStorage.setItem('mqamtech-theme',document.body.classList.contains('dark')?'dark':'light');button.innerHTML=document.body.classList.contains('dark')?'<i class="fa-solid fa-sun"></i>':'<i class="fa-solid fa-moon"></i>'});
